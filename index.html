@@ -9,6 +9,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/pink.css">
 </head>
 
@@ -22,15 +23,18 @@
             <a href="index.html">S & S</a>
           </h1>
         </div>
+        <div class="menu-toggle">
+          <span></span>
+        </div>
         <nav class="header-nav">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Couple</a></li>
-            <li><a href="#">Story</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">RSV</a></li>
+            <li><a href="index.html" data-scroll-nav="0" class="active">Home</a></li>
+            <li><a data-scroll-nav="1" href="#">Couple</a></li>
+            <li><a data-scroll-nav="2" href="#">Story</a></li>
+            <li><a data-scroll-nav="3" href="#">Events</a></li>
+            <li><a data-scroll-nav="4" href="#">People</a></li>
+            <li><a data-scroll-nav="5" href="#">Gallery</a></li>
+            <li><a data-scroll-nav="6" href="#">RSV</a></li>
           </ul>
         </nav>
       </div>
@@ -38,7 +42,7 @@
   </header>
   <!-- Header End -->
   <!-- Home Section Start -->
-  <section class="section home-section">
+  <section class="section home-section" data-scroll-index="0">
     <div class="slide active" style="background-image: url('./assets/img/top1.jpg');">
       <div class="container">
         <div class="row align-items-center">
@@ -75,7 +79,7 @@
   </section>
   <!-- Home Section End -->
   <!-- Couple Section Start -->
-  <section class="couple-section">
+  <section class="couple-section" data-scroll-index="1">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -129,7 +133,7 @@
   </section>
   <!-- Couple Section End -->
   <!-- Story Section Start -->
-  <section class="story-section">
+  <section class="story-section" data-scroll-index="2">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -194,7 +198,7 @@
   </section>
   <!-- Story Section End -->
   <!-- Event Section Start -->
-  <section class="event-section">
+  <section class="event-section" data-scroll-index="3">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -227,7 +231,7 @@
   </section>
   <!-- Event Section End -->
   <!-- People Section Start -->
-  <section class="people-section">
+  <section class="people-section" data-scroll-index="4">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -416,7 +420,7 @@
   </section>
   <!-- People Section End -->
   <!-- Gallery Section Start -->
-  <section class="gallery-section">
+  <section class="gallery-section" data-scroll-index="5">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -426,32 +430,32 @@
       <div class="row">
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date1.jpg" data-large="assets/img/date1.jpg" alt="">
+            <img src="assets/img/date1.jpg" data-large="assets/img/large/date1.jpg" alt="">
           </div>
         </div>
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date2.jpg" data-large="assets/img/date2.jpg" alt="">
+            <img src="assets/img/date2.jpg" data-large="assets/img/large/date2.jpg" alt="">
           </div>
         </div>
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date3.jpg" data-large="assets/img/date3.jpg" alt="">
+            <img src="assets/img/date3.jpg" data-large="assets/img/large/date3.jpg" alt="">
           </div>
         </div>
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date4.jpg" data-large="assets/img/date4.jpg" alt="">
+            <img src="assets/img/date4.jpg" data-large="assets/img/large/date4.jpg" alt="">
           </div>
         </div>
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date1.jpg" data-large="assets/img/date1.jpg" alt="">
+            <img src="assets/img/date1.jpg" data-large="assets/img/large/date1.jpg" alt="">
           </div>
         </div>
         <div class="gallery-item">
           <div class="gallery-item-inner">
-            <img src="assets/img/date2.jpg" data-large="assets/img/date2.jpg" alt="">
+            <img src="assets/img/date2.jpg" data-large="assets/img/large/date2.jpg" alt="">
           </div>
         </div>
       </div>
@@ -462,18 +466,99 @@
   <!-- Gallery Popup Start -->
   <div class="gallery-popup">
     <div class="gp-container">
-      <span class="gp-counter">1/6</span>
+      <span class="gp-counter"></span>
       <span class="gp-close">&times;</span>
-      <img src="assets/img/date1.jpg" alt="">
+      <img src="assets/img/large/date1.jpg" class="gp-img" alt="">
+      <div class="gp-controls">
+        <div class="prev">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="next">
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Gallery Popup End -->
-
+  <!-- Contact Section Start -->
+  <section class="rsvp-section" data-scroll-index="6">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>Your Are Invited</h2>
+          <p>Please kindly response before 3 Dec 2020</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="rsvp-form">
+          <form action="#" class="form">
+            <div class="row">
+              <div class="input-group w50">
+                <input type="text" placeholder="Name" class="input-control">
+              </div>
+              <div class="input-group w50">
+                <input type="text" placeholder="Email" class="input-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <select class="input-control">
+                  <option value="">Number of Guest</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <select class="input-control">
+                  <option value="I am attending">I am attending</option>
+                  <option value="I am not attending">I am not attending</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <textarea placeholder="Message" class="input-control"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn-1">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section End -->
   <!-- Footer Start -->
-
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-content">
+          <div class="couple-name">
+            <h2>
+              Soshiv
+              <span>&</span>
+              Shivani
+            </h2>
+          </div>
+          <p>Thak you</p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- Footer End -->
 
+  <!-- copyright Start -->
+  <p class="copyright-text">&copy; 2020.01 Katsuhiro Kakoi</p>
+  <!-- copyright End -->
+
   <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/scrollIt.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
